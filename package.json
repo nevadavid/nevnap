@@ -1,6 +1,6 @@
 {
 	"name": "nevnap",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Névnap (Hungarian nameday)",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
