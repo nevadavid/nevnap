@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"noImplicitAny": true,
+		"module": "commonjs",
+		"target": "es5",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"strict": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"downlevelIteration": true
+	},
+	"include": [
+		"src/**/*",
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	],
+}
