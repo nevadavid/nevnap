@@ -10,7 +10,8 @@
 		"strict": true,
 		"declaration": true,
 		"esModuleInterop": true,
-		"downlevelIteration": true
+		"downlevelIteration": true,
+		"sourceMap": true
 	},
 	"include": [
 		"src/**/*",

@@ -20,7 +20,11 @@
 		"url": "git+https://github.com/nevadavid/nevnap.git"
 	},
 	"author": "David Uri",
-	"license": "ISC",
+	"keywords": [
+		"namedays",
+		"typescript"
+	],
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/nevadavid/nevnap/issues"
 	},

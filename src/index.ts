@@ -4,7 +4,13 @@ function getNumberFromIndex(index: number) {
 	return `${index + 1}`.padStart(2, '0');
 }
 
-export function on(date: string) {
+/**
+ * Getting namedays on a specific date.
+ *
+ * @param {string} date
+ * @returns {string}
+ */
+export function on(date: string): string {
 	const [month, day] = date.split('-');
 	const monthIndex = parseInt(month, 10) - 1;
 	const dayIndex = parseInt(day, 10) - 1;
@@ -12,7 +18,13 @@ export function on(date: string) {
 	return namedays[monthIndex][dayIndex];
 }
 
-export function to(name: string) {
+/**
+ * Getting date on a specific name.
+ *
+ * @param {string} name
+ * @returns {string}
+ */
+export function to(name: string): string | undefined {
 	for (const [monthIndex, month] of namedays.entries()) {
 		for (const [dayIndex, day] of month.entries()) {
 			const names = day.split(',');
@@ -25,4 +37,17 @@ export function to(name: string) {
 			}
 		}
 	}
+}
+
+/**
+ * Getting namedays on the current day.
+ *
+ * @returns {string}
+ */
+export function today(): string {
+	const now = new Date();
+	const month = now.getMonth();
+	const day = now.getDate();
+
+	return namedays[month][day - 1];
 }
