@@ -24,7 +24,7 @@ yarn add nevnap
 
 ### Methods
 
-#### `today(): string`
+#### `today(): string[]`
 
 Getting today's nameday(s).
 
@@ -34,7 +34,7 @@ import { today } from 'nevnap';
 today(); // ['Zsuzsanna', 'Eliza', 'Konrád']
 ```
 
-#### `tomorrow(): string`
+#### `tomorrow(): string[]`
 
 Getting tomorrow's nameday(s).
 
@@ -44,7 +44,7 @@ import { tomorrow } from 'nevnap';
 tomorrow(); // ['Aladár', 'Álmos', 'Leó']
 ```
 
-#### `on(date: string): string`
+#### `on(date: string): string[]`
 
 Getting nameday(s) on a specific date.
 
@@ -54,7 +54,7 @@ import { on } from 'nevnap';
 on('04-22'); // ['Csilla', 'Noémi', 'Kájusz', 'Noé']
 ```
 
-#### `to(name: string): string`
+#### `to(name: string): string[]`
 
 Getting date(s) to a specific name.
 
