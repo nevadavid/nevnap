@@ -1,39 +1,39 @@
 name: Tests (node)
 
 on:
-    pull_request:
-    push:
-        branches:
-            - 'main'
+  pull_request:
+  push:
+    branches:
+      - "main"
 
 jobs:
-    tests:
-        name: 'Run tests'
+  tests:
+    name: "Run tests"
 
-        runs-on: 'ubuntu-latest'
+    runs-on: "ubuntu-latest"
 
-        steps:
-            - name: 'Cancel Previous Runs'
-              uses: styfle/cancel-workflow-action@0.8.0
-              with:
-                  access_token: ${{ github.token }}
+    steps:
+      - name: "Cancel Previous Runs"
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
 
-            - name: 'Checkout'
-              uses: actions/checkout@v2
+      - name: "Checkout"
+        uses: actions/checkout@v2
 
-            - name: Use Node.js LTS
-              uses: actions/setup-node@v1
-              with:
-                	node-version: '14'
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
 
-            - name: 'Setup node modules cache'
-              uses: actions/cache@v2
-              with:
-            		path: '**/node_modules'
-                	key: ${{ runner.os }}-modules-${{ hashFiles('package-lock.json') }}
+      - name: "Setup node modules cache"
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('package-lock.json') }}
 
-            - name: Install vendors
-              run: npm i
+      - name: Install vendors
+        run: npm i
 
-            - name: Run tests
-              run: npm run test
+      - name: Run tests
+        run: npm run test
