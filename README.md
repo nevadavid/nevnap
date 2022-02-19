@@ -1,11 +1,22 @@
-# nevnap
+# Névnap
 
-Névnap is a minimalist JavaScript library that displays hungarian namedays.
+Nevnap (névnap) is a minimalist JavaScript library that displays hungarian namedays.
+
+- 🔌 No dependencies
+- ↔️ No XHR
+
+The names used in this package are from [Wikipedia](https://hu.wikipedia.org/wiki/Magyar_n%C3%A9vnapok_list%C3%A1ja_d%C3%A1tum_szerint).
 
 ## Installation
 
 ```
 npm i nevnap
+```
+
+or
+
+```
+yarn add nevnap
 ```
 
 ## API
