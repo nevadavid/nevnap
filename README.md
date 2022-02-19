@@ -27,7 +27,7 @@ yarn add nevnap
 <script src="https://unpkg.com/nevnap@latest"></script>
 
 <script>
-	nevnap.today();
+nevnap.today();
 </script>
 ```
 
