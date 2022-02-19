@@ -4,6 +4,7 @@ Nevnap (névnap) is a minimalist JavaScript library that displays hungarian name
 
 - 🔌 No dependencies
 - ↔️ No XHR
+- 📦 Only 13.9kB (including names)
 
 The names used in this package are from [Wikipedia](https://hu.wikipedia.org/wiki/Magyar_n%C3%A9vnapok_list%C3%A1ja_d%C3%A1tum_szerint).
 
@@ -25,31 +26,40 @@ yarn add nevnap
 
 #### `today(): string`
 
-Getting namedays on the current day.
+Getting today's nameday(s).
 
 ```javascript
 import { today } from 'nevnap';
 
-today(); // Tamás
+today(); // ['Zsuzsanna', 'Eliza', 'Konrád']
 ```
 
+#### `tomorrow(): string`
+
+Getting tomorrow's nameday(s).
+
+```javascript
+import { tomorrow } from 'nevnap';
+
+tomorrow(); // ['Aladár', 'Álmos', 'Leó']
+```
 
 #### `on(date: string): string`
 
-Getting namedays on a specific date.
+Getting nameday(s) on a specific date.
 
 ```javascript
 import { on } from 'nevnap';
 
-on('04-22'); // Csilla, Noémi
+on('04-22'); // ['Csilla', 'Noémi', 'Kájusz', 'Noé']
 ```
 
 #### `to(name: string): string`
 
-Getting date on a specific name.
+Getting date(s) to a specific name.
 
 ```javascript
 import { to } from 'nevnap';
 
-to('Csilla'); // 04-22
+to('Csilla'); // ['04-22', '08-10']
 ```

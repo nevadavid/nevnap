@@ -1,13 +1,13 @@
 {
 	"name": "nevnap",
 	"version": "1.0.4",
-	"description": "Névnap (Hungarian nameday)",
+	"description": "Névnap is a minimalist JavaScript library that displays hungarian namedays.",
 	"main": "dist/index.js",
+	"module": "src/index.ts",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"test": "jest --config jest.config.json",
-		"build": "tsc",
-		"format": "prettier --write \"src/**/*.ts\"",
+		"test": "jest",
+		"build": "webpack",
 		"lint": "tslint -p tsconfig.json",
 		"prepare": "npm run build",
 		"prepublishOnly": "npm run test && npm run lint",
@@ -22,7 +22,10 @@
 	"author": "David Uri",
 	"keywords": [
 		"namedays",
-		"typescript"
+		"typescript",
+		"nevnap",
+		"nameday",
+		"hu"
 	],
 	"license": "MIT",
 	"bugs": {
@@ -39,10 +42,11 @@
 		"@types/jest": "^26.0.23",
 		"babel-jest": "^27.0.2",
 		"jest": "^27.0.4",
-		"prettier": "^2.3.2",
 		"ts-jest": "^27.0.3",
+		"ts-loader": "^9.2.6",
 		"tslint": "^6.1.3",
-		"tslint-config-prettier": "^1.18.0",
-		"typescript": "^4.3.2"
+		"typescript": "^4.3.2",
+		"webpack": "^5.69.1",
+		"webpack-cli": "^4.9.2"
 	}
 }
