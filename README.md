@@ -20,6 +20,17 @@ or
 yarn add nevnap
 ```
 
+## Browser (UMD)
+
+```html
+<!-- CDN example (unpkg) -->
+<script src="https://unpkg.com/nevnap@latest"></script>
+
+<script>
+	nevnap.today();
+</script>
+```
+
 ## API
 
 ### Methods
