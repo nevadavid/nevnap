@@ -1,6 +1,6 @@
 {
 	"name": "nevnap",
-	"version": "1.2.0",
+	"version": "1.0.4",
 	"description": "Névnap is a minimalist JavaScript library that displays hungarian namedays.",
 	"main": "dist/index.js",
 	"module": "src/index.ts",
